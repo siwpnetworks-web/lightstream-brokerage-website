@@ -199,6 +199,60 @@
       margin: 0 auto;
     }
 
+.contact-form {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 28px;
+  display: grid;
+  gap: 12px;
+  text-align: left;
+  background: var(--navy-light);
+  border: 1px solid #29384a;
+  border-radius: 8px;
+}
+
+.contact-form label {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--white);
+  margin-top: 8px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 13px;
+  font: inherit;
+  color: var(--white);
+  background: var(--navy);
+  border: 1px solid #405166;
+  border-radius: 4px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.contact-form button {
+  width: 100%;
+  margin-top: 14px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.contact-email a {
+  color: var(--gold);
+  overflow-wrap: anywhere;
+}
+    
     footer {
       padding: 24px 8%;
       border-top: 1px solid #29384a;
@@ -329,24 +383,104 @@
       </div>
     </section>
 
-    <section class="contact" id="contact">
-      <div class="eyebrow">LET'S DO BUSINESS</div>
-      <h2>Discuss Your Requirements</h2>
-      <p>
-        Are you a buyer, supplier or trading intermediary?
-        Contact our team to discuss your product requirements
-        and potential business opportunities.
-      </p>
 
-      <div class="buttons" style="justify-content:center">
-        <a
-          class="button button-primary"
-          href="mailto:info@lightstreambrokerage.com?subject=Business%20Enquiry"
-        >
-          Email Our Team
-        </a>
-      </div>
-    </section>
+<section class="contact" id="contact">
+  <div class="eyebrow">LET'S DO BUSINESS</div>
+  <h2>Discuss Your Requirements</h2>
+
+  <p>
+    Are you a buyer, supplier or trading intermediary?
+    Send us your enquiry about crude oil and refined petroleum
+    products. Our team will review your requirements.
+  </p>
+
+  <form
+    class="contact-form"
+    action="https://formspree.io/f/mljgzqad"
+    method="POST"
+  >
+    <input
+      type="hidden"
+      name="_subject"
+      value="New Light Stream Brokerage Enquiry"
+    />
+
+    <label for="contact-name">Full Name *</label>
+    <input
+      id="contact-name"
+      type="text"
+      name="name"
+      autocomplete="name"
+      required
+    />
+
+    <label for="contact-company">Company Name</label>
+    <input
+      id="contact-company"
+      type="text"
+      name="company"
+      autocomplete="organization"
+    />
+
+    <label for="contact-email">Business Email *</label>
+    <input
+      id="contact-email"
+      type="email"
+      name="email"
+      autocomplete="email"
+      required
+    />
+
+    <label for="contact-product">Product of Interest *</label>
+    <select id="contact-product" name="product" required>
+      <option value="">Select a product</option>
+      <option value="Crude Oil">Crude Oil</option>
+      <option value="Refined Petroleum Products">
+        Refined Petroleum Products
+      </option>
+      <option value="Other Energy Products">
+        Other Energy Products
+      </option>
+    </select>
+
+    <label for="contact-quantity">Required Quantity</label>
+    <input
+      id="contact-quantity"
+      type="text"
+      name="quantity"
+      placeholder="e.g. 50,000 metric tonnes"
+    />
+
+    <label for="contact-destination">Destination Market</label>
+    <input
+      id="contact-destination"
+      type="text"
+      name="destination"
+      placeholder="e.g. Europe, Asia, Middle East"
+    />
+
+    <label for="contact-message">Your Enquiry *</label>
+    <textarea
+      id="contact-message"
+      name="message"
+      rows="5"
+      required
+      placeholder="Tell us about your requirements..."
+    ></textarea>
+
+    <button type="submit" class="button button-primary">
+      Send Business Enquiry
+    </button>
+  </form>
+
+  <p class="contact-email">
+    Prefer email?
+    <a href="mailto:info@lightstreambrokerage.com">
+      info@lightstreambrokerage.com
+    </a>
+  </p>
+</section>
+
 
   </main>
 
