@@ -10,6 +10,27 @@
   <title>Light Stream Brokerage | Energy & Commodities</title>
 
   <style>
+
+.market-watch {
+  background: #101f30;
+}
+
+.market-widget {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.market-note {
+  max-width: 650px;
+  margin: 16px auto 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+    
     :root {
       --navy: #0b1725;
       --navy-light: #142538;
@@ -329,11 +350,12 @@
     </a>
 
     <nav aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#products">Products</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#market-watch">Market Prices</a>
+  <a href="#about">About Us</a>
+  <a href="#contact">Contact</a>
+</nav>
   </header>
 
   <main>
@@ -406,6 +428,34 @@
       </div>
     </section>
 
+    
+<section id="market-watch" class="market-watch">
+  <div class="section-heading">
+    <div class="eyebrow">ENERGY MARKET UPDATES</div>
+    <h2>Oil & Gas Price Movements</h2>
+    <p>
+      Follow published energy commodity prices and market movements.
+      Prices are provided by an external market-data service.
+    </p>
+  </div>
+
+  <div class="market-widget">
+    <script
+      type="text/javascript"
+      src="https://www.oil-price.net/COMMODITIES/gen.php?lang=en">
+    </script>
+    <noscript>
+      Enable JavaScript to view commodity prices.
+    </noscript>
+  </div>
+
+  <p class="market-note">
+    Market data may be delayed. Prices are indicative and subject
+    to the data provider's methodology and terms.
+  </p>
+</section>
+
+    
     <section class="about" id="about">
       <div class="about-content">
         <div class="eyebrow">ABOUT OUR COMPANY</div>
