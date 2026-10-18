@@ -11,9 +11,55 @@
 
   <style>
 
+
 .market-watch {
-  background: #101f30;
+  background: var(--navy);
+  padding: 70px 8%;
 }
+
+.market-watch .section-heading {
+  max-width: 800px;
+}
+
+.market-watch .section-heading h2 {
+  color: var(--white);
+}
+
+.market-watch .section-heading p {
+  color: var(--muted);
+}
+
+.market-widget {
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 24px;
+  background: var(--navy-light);
+  border: 1px solid #35465a;
+  border-top: 3px solid var(--gold);
+  border-radius: 8px;
+  overflow-x: auto;
+  box-shadow: 0 12px 30px #00000025;
+}
+
+/* Keep the embedded provider widget readable */
+.market-widget iframe {
+  max-width: 100%;
+}
+
+.market-note {
+  max-width: 850px;
+  margin: 16px auto 0;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .market-widget {
+    padding: 12px;
+  }
+}
+
 
 .market-widget {
   max-width: 650px;
